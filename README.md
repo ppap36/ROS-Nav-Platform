@@ -4,6 +4,9 @@
 ## Instruction
 ### Step 1
 下载roshybridA_ws以及rospid_ws到您的虚拟机中
+我的虚拟机配置：
+windows_wsl2 + ubuntu
+ros1-noetic
 ### Step 2
 打开两个终端，分别运行以下代码
 对于roshybridA_ws
