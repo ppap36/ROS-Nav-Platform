@@ -26,3 +26,15 @@ roslaunch tracking_pid gazebo_pid_test.test
 
 即可让机器人按照混合A*算法规划出来的路线进行行走
 ![image](https://github.com/ppap36/ROS-Nav-Platform/assets/108739132/c8f9f636-bd41-42b8-b5bf-3fb1e55e86dd)
+
+## Reference 
+本项目中的机器人主要参考了三个开源模型/教程，对此表示衷心的感谢，如有侵权，请联系
+
+（1）机器人模型：autolabor
+http://www.autolabor.com.cn/book/ROSTutorials/
+
+（2）混合A*模型:
+https://github.com/dengpw/hybrid_astar_planner.git
+
+（3）pid跟踪模型：
+https://github.com/nobleo/tracking_pid
