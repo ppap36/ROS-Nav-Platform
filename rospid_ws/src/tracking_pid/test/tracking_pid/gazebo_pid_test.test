@@ -11,8 +11,8 @@
       <remap from="local_trajectory" to="trajectory"/>
       <param name="controller_debug_enabled" value="True"/>
       <param name="l" value="0.1"/>
-      <param name="Kp_long"  value="15.0"/>
-      <param name="Kp_lat"  value="15.0"/>
+      <param name="Kp_long"  value="30.0"/>
+      <param name="Kp_lat"  value="30.0"/>
       <param name="Kp_ang"  value="5.0"/>
       <param name="Ki_long"  value="2"/>
       <param name="Ki_lat"  value="2"/>
