@@ -1,0 +1,36 @@
+<launch>
+
+    <node name="move_base" pkg="hybrid_astar_planner" type="test_planner" output="screen">
+    <!-- <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen"> -->
+        <rosparam file="$(find hybrid_astar_planner)/test_the_plugin/param/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+        <rosparam file="$(find hybrid_astar_planner)/test_the_plugin/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find hybrid_astar_planner)/test_the_plugin/param/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find hybrid_astar_planner)/test_the_plugin/param/global_costmap_params.yaml" command="load" /> 
+        <rosparam file="$(find hybrid_astar_planner)/test_the_plugin/param/base_local_planner_params.yaml" command="load" />
+        <rosparam file="$(find hybrid_astar_planner)/test_the_plugin/param/move_base_params.yaml" command="load" />
+        <rosparam file="$(find hybrid_astar_planner)/test_the_plugin/param/plugins.yaml" command="load" ns="/costmap_node/costmap"/>
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" /><!--这个标志是选择使用特定的全局规划器-->
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+        <param name="use_hybrid_astar" value="true" />
+    </node>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find hybrid_astar_planner)/test_the_plugin/maps/nav.yaml" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hybrid_astar_planner)/test_the_plugin/launch/config.rviz" />
+    
+    <!--<node name="tf_broadcaster" pkg="hybrid_astar_planner" type="tf_test_broadcaster" output="screen" /-->
+    <include file="$(find hybrid_astar_planner)/test_the_plugin/launch/amcl.launch" />
+
+    <param name="robot_description" command="$(find xacro)/xacro $(find hybrid_astar_planner)/test_the_plugin/urdf/xacro/my_base_camera_laser.urdf.xacro" />
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find hybrid_astar_planner)/test_the_plugin/world/navtest.world" />
+    </include>
+    <node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model mycar -param robot_description"  />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+</launch>
+
+
+
+
+
+

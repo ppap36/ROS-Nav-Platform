@@ -1,0 +1,55 @@
+<!--
+    小车底盘添加雷达
+-->
+<robot name="my_laser" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <!-- 雷达支架 -->
+    <xacro:property name="support_length" value="0.15" /> <!-- 支架长度 -->
+    <xacro:property name="support_radius" value="0.01" /> <!-- 支架半径 -->
+    <xacro:property name="support_x" value="0.0" /> <!-- 支架安装的x坐标 -->
+    <xacro:property name="support_y" value="0.0" /> <!-- 支架安装的y坐标 -->
+    <xacro:property name="support_z" value="${base_link_length / 2 + support_length / 2}" /> <!-- 支架安装的z坐标:底盘高度 / 2 + 支架高度 / 2  -->
+
+    <link name="support">
+        <visual>
+            <geometry>
+                <cylinder radius="${support_radius}" length="${support_length}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <material name="red">
+                <color rgba="0.8 0.2 0.0 0.8" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="support2base_link" type="fixed">
+        <parent link="base_link" />
+        <child link="support" />
+        <origin xyz="${support_x} ${support_y} ${support_z}" />
+    </joint>
+
+
+    <!-- 雷达属性 -->
+    <xacro:property name="laser_length" value="0.05" /> <!-- 雷达长度 -->
+    <xacro:property name="laser_radius" value="0.03" /> <!-- 雷达半径 -->
+    <xacro:property name="laser_x" value="0.0" /> <!-- 雷达安装的x坐标 -->
+    <xacro:property name="laser_y" value="0.0" /> <!-- 雷达安装的y坐标 -->
+    <xacro:property name="laser_z" value="${support_length / 2 + laser_length / 2}" /> <!-- 雷达安装的z坐标:支架高度 / 2 + 雷达高度 / 2  -->
+
+    <!-- 雷达关节以及link -->
+    <link name="laser">
+        <visual>
+            <geometry>
+                <cylinder radius="${laser_radius}" length="${laser_length}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <material name="black" />
+        </visual>
+    </link>
+
+    <joint name="laser2support" type="fixed">
+        <parent link="support" />
+        <child link="laser" />
+        <origin xyz="${laser_x} ${laser_y} ${laser_z}" />
+    </joint>
+</robot>
