@@ -15,24 +15,21 @@ ros1-noetic
 对于roshybridA_ws
 ```
 cd roshybridA_ws
+chmod -R 777 *
 source devel/setup.bash
 roslaunch hybrid_astar_planner navtest.launch
 ```
 对于rospid_ws
 ```
 cd rospid_ws
+chmod -R 777 *
 source devel/setup.bash
 roslaunch tracking_pid gazebo_pid_test.test
 ```
 ### tips 
-在运行中可能会出现以下情况
+如果不加入更改权限的代码，在运行中可能会出现以下情况
 
 ![48c17240904012b392350e8eac750dc](https://github.com/ppap36/ROS-Nav-Platform/assets/108739132/8cb2fd19-feb0-46da-a9ff-987126bd7923)
-
-此时需要更改权限，输入如下代码
-```
-chmod -R 777 *
-```
 
 此时显示的rviz和gazebo页面如图所示
 ![image](https://github.com/ppap36/ROS-Nav-Platform/assets/108739132/7d222b5e-4995-4f96-9b93-85adf75d5bf3)
