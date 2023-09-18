@@ -1,0 +1,2 @@
+hybrid_astar_planner
+-DCATKIN_DEVEL_PREFIX=/root/roshybridA_ws/devel -DCMAKE_INSTALL_PREFIX=/root/roshybridA_ws/install -G Unix Makefiles

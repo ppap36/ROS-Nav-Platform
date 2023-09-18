@@ -1,0 +1,8 @@
+prefix=/root/rospid_ws/devel
+
+Name: mobile_robot_simulator
+Description: Description of mobile_robot_simulator
+Version: 1.0.0
+Cflags: -I/root/rospid_ws/src/mobile_robot_simulator/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs nav_msgs roscpp tf sensor_msgs

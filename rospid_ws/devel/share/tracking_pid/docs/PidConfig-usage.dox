@@ -1,0 +1,27 @@
+\subsubsection usage Usage
+\verbatim
+<node name="tracking_pid" pkg="tracking_pid" type="tracking_pid">
+  <param name="l" type="double" value="0.5" />
+  <param name="Kp_long" type="double" value="1.0" />
+  <param name="Ki_long" type="double" value="0.0" />
+  <param name="Kd_long" type="double" value="0.0" />
+  <param name="Kp_lat" type="double" value="1.0" />
+  <param name="Ki_lat" type="double" value="0.0" />
+  <param name="Kd_lat" type="double" value="0.3" />
+  <param name="Kp_ang" type="double" value="1.0" />
+  <param name="Ki_ang" type="double" value="0.0" />
+  <param name="Kd_ang" type="double" value="0.3" />
+  <param name="feedback_long" type="bool" value="True" />
+  <param name="feedback_lat" type="bool" value="True" />
+  <param name="feedback_ang" type="bool" value="True" />
+  <param name="feedforward_long" type="bool" value="True" />
+  <param name="feedforward_lat" type="bool" value="True" />
+  <param name="feedforward_ang" type="bool" value="False" />
+  <param name="max_yaw_error_cal" type="double" value="0.25" />
+  <param name="dead_zone_yaw_error_cal" type="double" value="0.06" />
+  <param name="coupling_ang_long" type="bool" value="False" />
+  <param name="controller_debug_enabled" type="bool" value="False" />
+  <param name="controller_timeout" type="double" value="0.2" />
+</node>
+\endverbatim
+

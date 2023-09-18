@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /root/rospid_ws/devel/setup.sh

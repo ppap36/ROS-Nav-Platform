@@ -1,0 +1,8 @@
+prefix=/root/roshybridA_ws/install
+
+Name: hybrid_astar_planner
+Description: Description of hybrid_astar_planner
+Version: 1.1.2
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lhybrid_astar_planner -lgeometry_msgs -lpluginlib -lroscpp -lnav_core -ltf2_ros -lompl
+Requires: 

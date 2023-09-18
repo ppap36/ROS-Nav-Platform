@@ -1,0 +1,8 @@
+prefix=/root/rospid_ws/devel
+
+Name: tracking_pid
+Description: Description of tracking_pid
+Version: 2.2.0
+Cflags: -I/root/rospid_ws/devel/include -I/root/rospid_ws/src/tracking_pid/include
+Libs: -L${prefix}/lib -ltracking_pid
+Requires: actionlib actionlib_msgs angles dynamic_reconfigure geometry_msgs message_runtime nav_msgs roscpp std_msgs tf tf2_geometry_msgs tf2_ros visualization_msgs

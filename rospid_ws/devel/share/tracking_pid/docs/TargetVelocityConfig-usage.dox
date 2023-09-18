@@ -1,0 +1,10 @@
+\subsubsection usage Usage
+\verbatim
+<node name="tracking_pid" pkg="tracking_pid" type="tracking_pid">
+  <param name="target_x_vel" type="double" value="0.5" />
+  <param name="target_x_acc" type="double" value="0.2" />
+  <param name="target_yaw_vel" type="double" value="0.5" />
+  <param name="target_yaw_acc" type="double" value="0.2" />
+</node>
+\endverbatim
+

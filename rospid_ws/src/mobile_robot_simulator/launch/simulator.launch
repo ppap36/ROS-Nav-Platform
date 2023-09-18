@@ -1,0 +1,32 @@
+<!-- Launch file for starting the mobile robot simulator with a single laser scanner-->
+<launch>
+
+<node pkg="mobile_robot_simulator" type="mobile_robot_simulator_node" name="mob_sim_node">
+  <param name="publish_map_transform" value="true"/>
+  <param name="publish_rate" value="10.0"/>
+  <param name="velocity_topic" value="/cmd_vel"/>
+  <param name="odometry_topic" value="/odom"/>
+</node>
+
+<node pkg="mobile_robot_simulator" type="laser_scanner_simulator_node" name="laser_sim_node">
+  <param name="laser_topic" value="/scan"/>
+  <param name="map_service" value="/static_map"/>
+  <!-- laser parameters -->
+  <param name="laser_frame_id" value="base_link"/>
+  <param name="laser_fov" value="4.71"/>
+  <param name="laser_beam_count" value="541"/>
+  <param name="laser_max_range" value="30.0"/>
+  <param name="laser_min_range" value="0.05"/>
+  <param name="laser_frequency" value="10.0"/>
+  <!-- noise model parameters -->
+  <param name="apply_noise" value="true"/>
+  <param name="sigma_hit" value="0.005"/>
+  <param name="lambda_short" value="2.0"/>
+  <!-- noise model mixing coefficients -->
+  <param name="z_hit" value="0.995"/>
+  <param name="z_short" value="0.0"/>
+  <param name="z_max" value="0.005"/>
+  <param name="z_rand" value="0.0"/>
+</node>
+
+</launch>

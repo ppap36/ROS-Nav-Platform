@@ -1,0 +1,9 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~target_x_vel" : \b [double] Target x velocity for the interpolator min: 1e-09, default: 0.5, max: 10.0
+- \b "~target_x_acc" : \b [double] Target x acceleration for the interpolator min: 1e-09, default: 0.2, max: 100.0
+- \b "~target_yaw_vel" : \b [double] Target angular velocity for the interpolator min: 1e-09, default: 0.5, max: 10.0
+- \b "~target_yaw_acc" : \b [double] Target angular acceleration for the interpolator min: 1e-09, default: 0.2, max: 100.0
+

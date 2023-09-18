@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hybrid_astar_planner</name>
+  <version>1.1.2</version>
+  <description>A hybrid_astar_planner package for move_base</description>
+  <maintainer email="dengpw@qq.com">dengpw</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>BSD</license>
+
+
+  <!-- Url tags are optional, but multiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_export_depend>pluginlib</build_export_depend>
+  <exec_depend>pluginlib</exec_depend>
+
+
+  <build_depend>nav_core</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>ompl</build_depend>
+  <build_depend>map_server</build_depend>
+
+  <exec_depend>nav_core</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>ompl</exec_depend>
+  <exec_depend>map_server</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+      <nav_core plugin="${prefix}/hybrid_astar_planner_plugin.xml" />
+  </export>
+  
+  
+</package>

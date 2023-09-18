@@ -1,0 +1,26 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~l" : \b [double] Distance between axle and control point min: -10.0, default: 0.5, max: 10.0
+- \b "~Kp_long" : \b [double] Kp Longitudinal min: 0.0, default: 1.0, max: 5.0
+- \b "~Ki_long" : \b [double] Ki Longitudinal min: 0.0, default: 0.0, max: 2.0
+- \b "~Kd_long" : \b [double] Kd Longitudinal min: 0.0, default: 0.0, max: 5.0
+- \b "~Kp_lat" : \b [double] Kp Lateral min: 0.0, default: 1.0, max: 10.0
+- \b "~Ki_lat" : \b [double] Ki Lateral min: 0.0, default: 0.0, max: 2.0
+- \b "~Kd_lat" : \b [double] Kd Lateral min: 0.0, default: 0.3, max: 10.0
+- \b "~Kp_ang" : \b [double] Kp Angular min: 0.0, default: 1.0, max: 10.0
+- \b "~Ki_ang" : \b [double] Ki Angular min: 0.0, default: 0.0, max: 2.0
+- \b "~Kd_ang" : \b [double] Kd Angular min: 0.0, default: 0.3, max: 10.0
+- \b "~feedback_long" : \b [bool] Enable longitudinal feedback? min: False, default: True, max: True
+- \b "~feedback_lat" : \b [bool] Enable lateral feedback? min: False, default: True, max: True
+- \b "~feedback_ang" : \b [bool] Enable angular feedback? min: False, default: True, max: True
+- \b "~feedforward_long" : \b [bool] Enable longitudinal feedforward? min: False, default: True, max: True
+- \b "~feedforward_lat" : \b [bool] Enable lateral feedforward? min: False, default: True, max: True
+- \b "~feedforward_ang" : \b [bool] Enable angular feedforward? min: False, default: False, max: True
+- \b "~max_yaw_error_cal" : \b [double] Max yaw error for coupling between angular and longitudinal controllers min: 0.0, default: 0.25, max: 3.1416
+- \b "~dead_zone_yaw_error_cal" : \b [double] Dead zone in yaw error for coupling between angular and longitudinal controllers min: 0.0, default: 0.06, max: 3.1416
+- \b "~coupling_ang_long" : \b [bool] Enable coupling between angular and longitudinal controllers? min: False, default: False, max: True
+- \b "~controller_debug_enabled" : \b [bool] Debug controller intermediate gains min: False, default: False, max: True
+- \b "~controller_timeout" : \b [double] Timeout on setpoint input signal min: 0.0, default: 0.2, max: 10.0
+
