@@ -11,6 +11,13 @@ sudo apt install ros-noetic-map-server
 ### Step 1
 下载roshybridA_ws以及rospid_ws到您的虚拟机中
 
+注：有一个地方需要修改：
+![fc207175fd253ea7bb67f716c0137c6](https://github.com/ppap36/ROS-Nav-Platform/assets/108739132/9fbed73c-1002-4554-a631-2452b57c2662)
+
+上图中nav.yaml的第一行image: /root/rosnav_ws/src/nav_pkg/map/nav.pgm
+需要改成你自己文件目录下nav.pgm的路径（PS：nav.yaml跟nav.pgm在同一个路径）
+
+
 我的虚拟机配置：
 
 windows_wsl2 + ubuntu
