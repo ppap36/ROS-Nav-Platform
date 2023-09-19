@@ -7,6 +7,10 @@
 '''
 sudo apt install ros-noetic-map-server
 '''
+然后安装ros导航包
+···
+sudo apt install ros-noetic-navigation
+···
 
 ### Step 1
 下载roshybridA_ws以及rospid_ws到您的虚拟机中
