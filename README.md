@@ -2,6 +2,12 @@
 ## Introduction
  该项目是一个ROS导航集成测试平台，能够实现混合A*算法，并在Gazebo以及rviz中显示出来
 ## Instruction
+### Step 0
+请先安装地图服务包
+'''
+sudo apt install ros-noetic-map-server
+'''
+
 ### Step 1
 下载roshybridA_ws以及rospid_ws到您的虚拟机中
 
